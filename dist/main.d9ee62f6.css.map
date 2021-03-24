@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.d9ee62f6.css","sourceRoot":".."}
+{"version":3,"sources":["src\\scss\\abstract\\_fonts.scss"],"names":[],"mappings":"AAAQ","file":"main.d9ee62f6.css","sourceRoot":"..","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap\");\r\n\r\n$kumbh: \"Kumbh Sans\", sans-serif;\r\n$weights: (\r\n  \"normal\": 400,\r\n  \"bold\": 700,\r\n);\r\n"]}
