@@ -9,22 +9,46 @@
 }
 
 body {
+  height: 100vh;
+  width: 100%;
   background-color: map.get(abstract.$colors, "dark-cyan");
+}
+
+main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  background: url("../../images/bg-pattern-top.svg") top -300px left -300px
+      no-repeat,
+    url("../../images/bg-pattern-bottom.svg") bottom -300px right -300px
+      no-repeat;
+  background-size: 40%;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  background-color: #fff;
+  overflow: hidden;
+  background-color: aliceblue;
   width: 500px;
   height: 500px;
   border-radius: 20px;
   box-shadow: 2px 2px 10px
     map.get(abstract.$colors, "very-dark-desaturated-blue");
+}
+
+.header {
+  height: 40%;
+  width: 100%;
+  background-image: url("../../images/bg-pattern-card.svg");
+}
+
+img {
+  width: 80%;
+  border-radius: 50%;
+  border: 10px solid #fff;
 }
