@@ -10,23 +10,33 @@
 
 body {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-color: map.get(abstract.$colors, "dark-cyan");
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
   width: 100%;
   height: 100%;
-  background: url("../../images/bg-pattern-top.svg") top -20em left no-repeat /*,
-    url("../../images/bg-pattern-bottom.svg") bottom -300px right -300px
-      no-repeat*/;
-  background-size: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+main > img {
+  position: absolute;
+  width: 50%;
+  &:nth-child(1) {
+    top: -50%;
+  }
+  &:nth-child(2) {
+    bottom: -50%;
+    right: 0;
+  }
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -46,8 +56,26 @@ main {
   background-image: url("../../images/bg-pattern-card.svg");
 }
 
-img {
-  width: 80%;
-  border-radius: 50%;
-  border: 10px solid #fff;
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  img {
+    width: 100%;
+    border-radius: 50%;
+    border: 10px solid #fff;
+  }
+  .name {
+    display: flex;
+  }
+}
+
+.statistics {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
