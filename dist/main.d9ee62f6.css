@@ -23,13 +23,13 @@ main {
 
 main > img {
   position: absolute;
-  width: 50%;
+  width: max(500px, 50vw);
 }
 main > img:nth-child(1) {
-  top: -50%;
+  top: -25vw;
 }
 main > img:nth-child(2) {
-  bottom: -50%;
+  bottom: -25vw;
   right: 0;
 }
 
@@ -41,14 +41,14 @@ main > img:nth-child(2) {
   align-items: center;
   overflow: hidden;
   background-color: aliceblue;
-  width: 500px;
-  height: 500px;
+  width: clamp(300px, 50vw, 400px);
+  height: min(50vh, 500px);
   border-radius: 20px;
   box-shadow: 2px 2px 10px #2d3248;
 }
 
 .header {
-  height: 40%;
+  height: 35%;
   width: 100%;
   background-image: url("/bg-pattern-card.ac0e14c5.svg");
 }
@@ -64,9 +64,17 @@ main > img:nth-child(2) {
   width: 100%;
   border-radius: 50%;
   border: 10px solid #fff;
+  position: relative;
+  top: -40%;
 }
 .introduction .name {
   display: flex;
+  position: relative;
+  top: -35%;
+}
+.introduction .name h1,
+.introduction .name span {
+  font-size: 1.5rem;
 }
 
 .statistics {
